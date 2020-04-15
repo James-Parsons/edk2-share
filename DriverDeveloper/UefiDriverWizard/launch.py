@@ -164,7 +164,7 @@ class MyApp(wx.App):
     if Version.count('.') > 1:
       Position = TextField.GetInsertionPoint()
       ValidVersion = Version[:Position-1] + Version[Position:]
-      TextField.SetValue(ValidVersion)
+      TextField.ChangeValue(ValidVersion)
       TextField.SetInsertionPoint(Position-1)
       return ValidVersion
     ValidVersion = Version.translate(None, string.letters + string.punctuation.translate (None,'.') + ' ')
